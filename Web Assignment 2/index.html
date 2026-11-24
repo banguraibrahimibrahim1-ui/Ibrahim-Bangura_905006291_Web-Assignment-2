@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QUICK PEAK ZONE | Restaurant</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">QUICK <span>PEAK</span> ZONE</div>
+
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+    <nav id="navbar">
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#services">SERVICES</a>
+        <a href="#features">FEATURES</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+</header>
+
+<!-- HOME SECTION -->
+<section class="hero" id="home">
+    <div>
+        <h1>Welcome to Quick Peak Zone</h1>
+        <p>Good Food, Great Taste, Unforgettable Experience.</p>
+        <a href="#services" class="btn">Explore Our Menu</a>
+    </div>
+</section>
+
+<!-- FOOD GALLERY -->
+<section>
+    <div class="section-title">
+        <h2>Our Delicious Food</h2>
+        <p>Enjoy delicious meals prepared with care.</p>
+    </div>
+
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Fresh food">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd" alt="Burger">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" alt="Healthy meal">
+    </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="services">
+    <div class="section-title">
+        <h2>Our Services</h2>
+        <p>Discover some of the meals we offer.</p>
+    </div>
+
+    <div class="services-grid">
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b" alt="Fried rice">
+            <h3>Fried Rice</h3>
+            <p>Deliciously prepared fried rice with great flavour.</p>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591" alt="Pizza">
+            <h3>Pizza</h3>
+            <p>Enjoy tasty pizza prepared with quality ingredients.</p>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd" alt="Burger">
+            <h3>Burgers</h3>
+            <p>Fresh and satisfying burgers for every occasion.</p>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554" alt="African food">
+            <h3>African Dishes</h3>
+            <p>Enjoy delicious meals inspired by African flavours.</p>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="Food">
+            <h3>Special Meals</h3>
+            <p>Enjoy our selection of tasty and satisfying meals.</p>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe" alt="Fresh salad">
+            <h3>Fresh Salads</h3>
+            <p>Fresh and colourful meals prepared for you.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-content">
+
+        <div>
+            <h3>QUICK PEAK ZONE</h3>
+            <p>Good Food, Great Taste, Unforgettable Experience.</p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <a href="/index.html">HOME</a>
+            <a href="/about.html">ABOUT</a>
+            <a href="/services.html">SERVICES</a>
+            <a href="/feaures.html">FEATURES</a>
+            <a href="/contact.html">CONTACT</a>
+            </div>
+
+        <div>
+            <h3>Contact Information</h3>
+            <p>Phone: +232 76 000 000</p>
+            <p>Email: quickpeakzone@gmail.com</p>
+            <p>Location: Sierra Leone</p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        <p>&copy; 2026 Quick Peak Zone. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("navbar").classList.toggle("active");
+}
+
+document.querySelectorAll("#navbar a").forEach(function(link) {
+    link.addEventListener("click", function() {
+        document.getElementById("navbar").classList.remove("active");
+    });
+});
+
+function sendMessage(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+
+    const recipient = "quickpeakzone@gmail.com";
+
+    const body =
+        "Name: " + name +
+        "\nEmail: " + email +
+        "\n\nMessage: " + message;
+
+    window.location.href =
+        "mailto:" + recipient +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+}
+</script>
+
+</body>
+</html>
